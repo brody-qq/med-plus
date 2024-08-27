@@ -1,0 +1,440 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.background-image {
+    background-image: url('./images/background.PNG');
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+.background-with-logo-image {
+    background-image: url('./images/background_with_logo.PNG');
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+/*******************************************************/
+
+.landing-layout {
+    display: grid;
+    grid-template-areas:
+    " .         .        . "
+    " .   landing-title  . "
+    " .         .        . "
+    " . button-container ."
+    " .         .        ." ;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 10% 10% 10% 40% auto;
+}
+
+.landing-title {
+    grid-area: landing-title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    grid-area: button-container;
+}
+
+/*******************************************************/
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-around;*/
+    align-items: center;
+}
+
+.flex-justify-content-space-around {
+    justify-content: space-around;
+}
+
+.flex-justify-content-end {
+    justify-content: end;
+}
+
+.flex-justify-content-space-between {
+    justify-content: space-between;
+}
+
+.flex-justify-content-space-evenly {
+    justify-content: space-evenly;
+}
+
+.link-button {
+    display: flex;
+    /* background-color: rgb(144, 225, 251); */
+    border-radius: 10px;
+    width: 250px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    border: 0;
+
+    cursor: pointer;
+}
+
+.no-bullet-points {
+    list-style: none;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+/*******************************************************/
+
+.home-layout {
+    display: grid;
+    grid-template-areas: 
+    ".         .                   .                   .            ."
+    ".  med-list-selection  med-list-selection  med-list-selection  ."
+    ".         .                   .                   .            ."
+    ".       title               title               title          ."
+    ".         .                   .                   .            ."
+    ".  med-list-container         .          button-container      ."
+    ".         .                   .                   .            ."
+    " nav-bar  nav-bar  nav-bar  nav-bar  nav-bar ";
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 
+        2.5% 
+        0%     /* med-list-selection */
+        0% 
+        10%     /* title */
+        auto 
+        65%     /* med-list-container & button-container */
+        auto 
+        60px;   /* nav-bar */
+}
+
+.med-list-container {
+    grid-area: med-list-container;
+    overflow: auto;
+}
+
+.med-list-item-flexbox {
+    height: 100%;
+}
+
+.med-list-entry-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /*width: 100%;*/
+    width: 500px;
+}
+
+/*** INSIDE OF MED LIST ENTRY CONTAINER ***/
+.med-list-entry-box {
+    display: flex;
+    border-radius: 10px;
+    /*width: 300px;*/
+    width: 80%;
+    height: 80px;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 0;
+    border: 0;
+    margin-left: 10px;
+
+    cursor: pointer;
+}
+.med-list-entry-time {
+    width: 20%;
+}
+/*********/
+
+/*** INSIDE OF MED LIST ENTRY BOX ***/
+.med-list-entry-name {
+    width: 50%;
+    margin-left: 5%;
+    text-align: left;
+    overflow: hidden;
+}
+.med-list-entry-quantity {
+    width: 28%;
+    text-align: left;
+    overflow: hidden;
+}
+.med-list-entry-checkbox {
+    width: 10%;
+    text-align: left;
+}
+/*********/
+
+.med-list-selection {
+    grid-area: med-list-selection;
+}
+
+.med-list-time-to-take-quantity-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.time-to-take-button {
+    font-size: 50px;
+    margin-left: 10px;
+
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    cursor: pointer;
+}
+
+.quantity-input {
+    margin-left: 10px;
+}
+
+/*******************************************************/
+
+.background-grey {
+    /* same color as nav-bar */
+    background-color: rgb(172, 172, 172);
+}
+
+.background-grey-hover:hover {
+    background-color: rgb(136, 136, 136);
+}
+
+.background-blue {
+    background-color: rgb(93, 214, 255);
+}
+
+.background-blue-hover:hover {
+    background-color: rgb(35, 166, 209);
+}
+
+.background-red {
+    background-color: rgb(253, 78, 78);
+}
+
+.background-red-hover:hover {
+    background-color: rgb(211, 43, 43);
+}
+
+/*
+original color of SubmitInput:
+background-color: rgb(209, 209, 209);
+*/
+
+/*******************************************************/
+
+.check-box {
+    width: 20px;
+    height: 20px;
+}
+
+.check-box {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/*******************************************************/
+
+.nav-bar {
+    grid-area: nav-bar;
+    /*background-color: rgb(156, 156, 156);*/
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-bar-button {
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/*******************************************************/
+
+/* TODO rename these, 'edit' refers to different page now */
+.edit-layout {
+    display: grid;
+    grid-template-areas: 
+    ".        .          .          .        ."
+    ".      title      title      title      ."
+    ".        .          .          .        ."
+    ".  edit-container   .   add-new-button  ."
+    ".        .          .          .        ."
+    "nav-bar  nav-bar  nav-bar  nav-bar  nav-bar";
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 2.5% 10% auto 65% auto 60px;
+}
+
+.edit-container {
+    grid-area: edit-container;
+    overflow: auto;
+    /*
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    */
+}
+
+.med-selection-button {
+    width: 400px;
+}
+
+/*** INSIDE OF MED SELECTION BUTTON ***/
+.med-selection-button-name {
+    width: 70%;
+    margin-left: 5%;
+    overflow: hidden;
+}
+
+.med-selection-button-edit-icon {
+    width: 15%;
+    margin-left: 5%;
+}
+/*********/
+
+.no-underline {
+    text-decoration: none;
+}
+
+.add-new-button {
+    grid-area: add-new-button;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/*******************************************************/
+
+.edit-med-layout {
+    display: grid;
+    grid-template-areas: 
+    ".           .       .           .            ."
+    ".         title   title       title          ."
+    ".           .       .           .            ."
+    ".    add-med-form   .   delete-med-container ."
+    ".           .       .           .            ."
+    "nav-bar   nav-bar   nav-bar   nav-bar   nav-bar";
+    grid-template-columns: auto 55% auto 250px auto;
+    grid-template-rows: 2.5% 10% auto 72% auto 60px;
+}
+
+.delete-med-container {
+    grid-area: delete-med-container;
+    display: flex;
+    align-items: end;
+}
+.delete-med-button {
+}
+
+/*******************************************************/
+
+.add-med-layout {
+    display: grid;
+    grid-template-areas: 
+    ".           .        ."
+    ".         title      ."
+    ".           .        ."
+    ".    add-med-form    ."
+    ".           .        ."
+    "nav-bar  nav-bar  nav-bar";
+    grid-template-columns: auto 55% auto;
+    grid-template-rows: 2.5% 10% auto 72% auto 60px;
+}
+
+.add-med-form {
+    grid-area: add-med-form;
+    /* background-color: rgb(144, 225, 251); */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.add-med-input {
+    background-color: white;
+    border-radius: 10px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    width: 90%;
+}
+
+.left-padding {
+    padding-left: 10px;
+}
+
+.hidden-submit-button {
+    width: 100%;
+    height: 100%;
+    border: hidden;
+    /* background-color: rgb(209, 209, 209); */
+    border-radius: inherit;
+
+    cursor: pointer;
+}
+
+.hidden-text-box {
+    outline: none;
+    border: hidden;
+    width: 100%;
+}
+
+/*******************************************************/
+
+.font-small {
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.font-medium {
+    font-weight: 600;
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+}
+
+.font-large {
+    font-weight: 600;
+    font-size: 40px;
+    color: black;
+    text-decoration: none;
+}
+
+.font-very-large {
+    font-weight: 600;
+    font-size: 60px;
+    color: black;
+    text-decoration: none;
+}
